@@ -15,8 +15,8 @@ public class Gonderi {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int gonderi_id;
 
-    ManyToOne
-    @JoinColumn(name=kullanici_id)
+    @ManyToOne
+    @JoinColumn( name="kullanici_id")
     private Kullanici kullanici;
 
     private String metin;

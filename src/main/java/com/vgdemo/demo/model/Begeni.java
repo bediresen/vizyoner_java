@@ -16,12 +16,12 @@ public class Begeni {
 
     private int begeni_id;
 
-    ManyToOne
-    @JoinColumn(name=kullanici_id)
+    @ManyToOne
+    //@JoinColumn(name= "kullanici_id");
     private Kullanici kullanici;
 
-    ManyToOne
-    @JoinColumn(name=gonderi_id)
+    @ManyToOne
+    //@JoinColumn(name="gonderi_id");
     private Gonderi gonderi;
 
 

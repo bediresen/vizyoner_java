@@ -15,9 +15,11 @@ public class Paylas {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int paylasma_id;
+
     @ManyToOne
-    @JoinColumn(name=gonderi_id)
+    @JoinColumn(name="gonderi_id")
     private Gonderi gonderi;
+
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "kullanici_id", referencedColumnName = "kullanici_id")
     private Kullanici kullanici;

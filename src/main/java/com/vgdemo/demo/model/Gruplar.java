@@ -20,11 +20,10 @@ public class Gruplar {
             joinColumns=@JoinColumn(name="uye_id"),
             inverseJoinColumns = @JoinColumn(name = "grup_id")
     )
-    private Grup Grup_id;
 
     @ManyToOne
-    @JoinColumn(name=olusturan_id)
-    private Grup Grup_olusturan;
+    @JoinColumn(name= "olusturan_id")
+    private Gruplar Grup_olusturan;
 
 
     private int grup_mevcut;

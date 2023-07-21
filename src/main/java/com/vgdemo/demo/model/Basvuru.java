@@ -17,10 +17,10 @@ public class Basvuru {
     private int basvuru_id;
 
     @ManyToOne
-    @JoinColumn(name=kullanici_id)
-    private Kullanici kullanici;
+    @JoinColumn(name="kullanici_id")
+    private Kullanici kullanici_basvuran;
 
     @ManyToOne
-    @JoinColumn(name=ilan_id)
+    @JoinColumn(name="ilan_id")
     private Ilanlar ilan;
 }

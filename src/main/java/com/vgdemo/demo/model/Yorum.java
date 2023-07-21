@@ -17,11 +17,12 @@ public class Yorum {
     private int yorum_id;
 
     @ManyToOne
-    @JoinColumn(name=kullanici_id)
+    @JoinColumn(name="kullanici_id")
     private Kullanici kullanici;
 
+
     @ManyToOne
-    @JoinColumn(name=gonderi_id)
+    @JoinColumn(name="gonderi_id")
     private Gonderi gonderi;
 
     private String yorum_metni;

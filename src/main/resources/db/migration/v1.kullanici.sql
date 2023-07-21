@@ -13,7 +13,9 @@ adres varchar(100),
 baglanti_sayisi int,
 takip_sayisi int,
 hesap_turu varchar(50),
+baglanti_id int,
 PRIMARY KEY (kullanici_id)
 FOREIGN KEY (sirket_id) REFERENCES SIRKET(sirket_id)
+FOREIGN KEY (baglanti_id) REFERENCES BAGLANTI(baglanti_id)
 
 }

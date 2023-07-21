@@ -13,17 +13,23 @@ public class Kullanici {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int kullanici_id;
+
     private String tc_no;
-    private  String ad;
-    private  String soyad;
-    private  String e_mail;
+    private String ad;
+    private String soyad;
+    private String e_mail;
     private String dogum_tarihi;
     private String fotograf;
-   // private String sirket_id;
 
     @ManyToOne
     @JoinColumn(name = "sirket_id")
     private Sirket sirket;
+
+
+
+
+    @OneToMany(mappedBy = "kullanici2")
+    private List<Arkadas> arkadaslar2;
 
 
     private String cinsiyet;
@@ -32,5 +38,4 @@ public class Kullanici {
     private int baglanti_sayisi;
     private int takip_sayisi;
     private String hesap_turu;
-
 }
